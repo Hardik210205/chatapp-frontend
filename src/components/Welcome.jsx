@@ -12,7 +12,7 @@ export default function Welcome({currentUser}) {
         <h1>{currentUser.username}!</h1>
             </span>
         </h1>
-        <h3>Chatting Tum Karo, Privacy Hum Sambhal Lege !! </h3>
+        <h3>Realtime Chatting with Flutterfly !! </h3>
     
     </Container>
 
