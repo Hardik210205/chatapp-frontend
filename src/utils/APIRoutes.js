@@ -8,6 +8,7 @@ export const allUsersRoute = `${host}/api/auth/allusers`;
 export const sendMessageRoute = `${host}/api/messages/addmsg`;
 export const sendMessageRoutes = sendMessageRoute;
 export const getAllMessagesRoute = (id) => `${host}/api/messages/getmsg/${id}`;
-
-// Add alias so imports that expect the other name build correctly
 export const getAllMessageRoutes = getAllMessagesRoute;
+
+// Add aliases to match imports that use different capitalization/names
+export const SetAvatarRoute = setAvatarRoute;
