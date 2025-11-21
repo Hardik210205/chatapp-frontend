@@ -1,14 +1,24 @@
+// Use env var set at build time. Defaults to localhost for local dev.
 const API_HOST = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 export const host = API_HOST;
 export const registerRoute = `${host}/api/auth/register`;
 export const loginRoute = `${host}/api/auth/login`;
-export const setAvatarRoute = `${host}/api/auth/setavatar`;
-export const allUsersRoute = `${host}/api/auth/allusers`;
-export const sendMessageRoute = `${host}/api/messages/addmsg`;
-export const sendMessageRoutes = sendMessageRoute;
-export const getAllMessagesRoute = (id) => `${host}/api/messages/getmsg/${id}`;
-export const getAllMessageRoutes = getAllMessagesRoute;
 
-// Add aliases to match imports that use different capitalization/names
+// canonical name (lowercase)
+export const setAvatarRoute = `${host}/api/auth/setavatar`;
+// alias with capital S if some files import SetAvatarRoute
 export const SetAvatarRoute = setAvatarRoute;
+
+export const allUsersRoute = `${host}/api/auth/allusers`;
+
+// send message (singular canonical)
+export const sendMessageRoute = `${host}/api/messages/addmsg`;
+// alias plural if some files import sendMessageRoutes
+export const sendMessageRoutes = sendMessageRoute;
+
+// get all messages (canonical)
+export const getAllMessagesRoute = (id) => `${host}/api/messages/getmsg/${id}`;
+// alias variations found in code
+export const getAllMessageRoutes = getAllMessagesRoute;
+export const getAllMessageRoute = getAllMessagesRoute;
