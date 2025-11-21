@@ -1,5 +1,5 @@
 // Use env var set at build time. Defaults to localhost for local dev.
-const API_HOST = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_HOST = "https://chatapp-backend-m6fs.onrender.com";
 
 export const host = API_HOST;
 export const registerRoute = `${host}/api/auth/register`;
