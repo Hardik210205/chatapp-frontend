@@ -6,7 +6,8 @@ export const loginRoute = `${host}/api/auth/login`;
 export const setAvatarRoute = `${host}/api/auth/setavatar`;
 export const allUsersRoute = `${host}/api/auth/allusers`;
 export const sendMessageRoute = `${host}/api/messages/addmsg`;
+export const sendMessageRoutes = sendMessageRoute;
 export const getAllMessagesRoute = (id) => `${host}/api/messages/getmsg/${id}`;
 
-// add alias to satisfy imports that expect the plural name
-export const sendMessageRoutes = sendMessageRoute;
+// Add alias so imports that expect the other name build correctly
+export const getAllMessageRoutes = getAllMessagesRoute;
